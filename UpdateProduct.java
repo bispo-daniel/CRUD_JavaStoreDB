@@ -46,6 +46,6 @@ public class UpdateProduct {
 			e.printStackTrace();
     	}
     	
-    	Main.menu();
+    	Main.productMenu();
     }
 }

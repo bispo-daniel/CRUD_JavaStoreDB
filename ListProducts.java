@@ -28,6 +28,6 @@ public class ListProducts {
     		e.printStackTrace();
     	}
     	
-    	Main.menu();
+    	Main.productMenu();
     }
 }

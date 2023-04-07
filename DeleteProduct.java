@@ -11,17 +11,19 @@ public class DeleteProduct {
     	try {
     		String sql = "DELETE FROM product WHERE id = ?";
     		PreparedStatement statement = Connect.connection.prepareStatement(sql);
+			
     		statement.setInt(1, id);
     		int rowsManipulated = statement.executeUpdate();
     		
     		if(rowsManipulated > 0) {
-    			JOptionPane.showMessageDialog(null, "Product Successfully deleted!");
+				String dialog = "Product %d Successfully deleted!";
+    			JOptionPane.showMessageDialog(null, String.format(dialog, id));
     		}
     		
     	} catch (SQLException e) {
     		e.printStackTrace();
     	}
     	
-    	Main.menu();
+    	Main.productMenu();
     }
 }

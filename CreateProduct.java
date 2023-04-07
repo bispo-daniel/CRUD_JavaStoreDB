@@ -6,25 +6,26 @@ public class CreateProduct {
     static void createProduct() {
     	String name = JOptionPane.showInputDialog("Type the product's name");
     	String priceStr = JOptionPane.showInputDialog("Type the product's price per unit");
-    	double price = Double.parseDouble(priceStr);
+    		double price = Double.parseDouble(priceStr);
     	
-    	String sql = "INSERT INTO product (name, unit_price) VALUES (?, ?)";
-    	PreparedStatement statement;
 		try {
+			String sql = "INSERT INTO product (name, unit_price) VALUES (?, ?)";
+			PreparedStatement statement;
+
 			statement = Connect.connection.prepareStatement(sql);
 	    	statement.setString(1, name);
 	    	statement.setDouble(2, price);
 	    	
-    		int rowsManipulated = statement.executeUpdate();
+    		int response = statement.executeUpdate();
     		
-    		if(rowsManipulated > 0) {
-    			JOptionPane.showMessageDialog(null, "Product Successfully created!");
+    		if(response > 0) {
+				String dialog = "Product %s Successfully created!";
+    			JOptionPane.showMessageDialog(null, String.format(dialog, name));
     		}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		Main.menu();
+		Main.productMenu();
     }
 }
