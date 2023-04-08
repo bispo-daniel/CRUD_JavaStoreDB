@@ -9,17 +9,18 @@ public class ListSalesProducts {
         allRows = "";
 
         try {
-            //SQL TO BE UPDATED TO A BETTER VERSION
-            String sql = "SELECT * FROM sale_product";
+            String sql = "SELECT s.sale_date, p.name, p.unit_price, c.name FROM sale_product sp JOIN sale s ON sp.saleid_FK = s.id JOIN product p ON sp.productid_FK = p.id JOIN customer c ON s.customerid_FK = c.id ORDER BY s.sale_date desc";
             Statement stt = Connect.connection.createStatement();
             ResultSet res = stt.executeQuery(sql);
 
             while(res.next()){
-                long productId = res.getLong(1);
-                long saleId = res.getLong(2);
+                String saleDate = res.getString(1);
+                String productName = res.getString(2);
+                double productPrice = res.getDouble(3);
+                String customerName = res.getString(4);
 
-                String row = "%d - %d \n";
-                allRows += String.format(row, productId, saleId);
+                String row = "%s - %s - %.2f - %s \n";
+                allRows += String.format(row, saleDate, productName, productPrice, customerName);
             }
 
             JOptionPane.showMessageDialog(null, allRows);

@@ -57,7 +57,7 @@ public class Main {
 		}
 	}
 
-static void saleMenu(){
+	static void saleMenu(){
 		String options = "Sale menu:\n\n 0- Return\n 1- Create sale\n 2- List sales\n 3- Update sale\n 4- Delete sale";
 		String opStr = JOptionPane.showInputDialog(options);
 		int op = Integer.parseInt(opStr);
@@ -120,7 +120,7 @@ static void saleMenu(){
 			switch(op) {
 				case 0:
 					System.exit(0);
-					break;
+						break;
 				case 1:
 					productMenu();
 						break;
