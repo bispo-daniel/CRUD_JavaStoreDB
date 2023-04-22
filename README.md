@@ -20,7 +20,6 @@
 # Screenshots
 
 ## `Main menu`
-![all-text](https://github.com/bispo-daniel/CRUD_JavaStoreDB/main/Screenshots/MainMenuScreenshot.png)
-
+![all-text](https://github.com/bispo-daniel/CRUD_JavaStoreDB/blob/main/Screenshots/MainMenuScreenshot.png)
 ## `Products menu`
-![all-text](https://github.com/bispo-daniel/CRUD_JavaStoreDB/main/Screenshots/ProductsMenuScreenshot.png)
+![all-text](https://github.com/bispo-daniel/CRUD_JavaStoreDB/blob/main/Screenshots/ProductsMenuScreenshot.png)
