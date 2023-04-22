@@ -21,5 +21,5 @@
 
 ## `Main menu`
 ![all-text](https://github.com/bispo-daniel/CRUD_JavaStoreDB/blob/main/Screenshots/MainMenuScreenshot.png)
-## `Products menu`
+## `Product menu`
 ![all-text](https://github.com/bispo-daniel/CRUD_JavaStoreDB/blob/main/Screenshots/ProductsMenuScreenshot.png)
